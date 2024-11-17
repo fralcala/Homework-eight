@@ -1,0 +1,39 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  padding: 26px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: lato-ita;
+  font-size: 15px;
+  z-index: 1;
+
+  .links ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+  }
+
+  .socials {
+    display: flex;
+    ul {
+      display: flex;
+      width: 78px;
+      justify-content: space-between;
+    }
+
+    img {
+      width: 19px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    font-size: 10px;
+  }
+}

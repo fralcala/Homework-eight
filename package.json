@@ -1,0 +1,23 @@
+{
+  "name": "homework-eight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "live-server dist",
+    "compile": "sass dist/scss/styles.scss dist/css/styles.css ",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^11.0.2",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "jquery": "^3.7.1",
+    "sass": "^1.81.0"
+  }
+}
