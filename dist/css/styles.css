@@ -327,6 +327,7 @@ footer .socials img {
 }
 .createPage .form {
   margin: 0 auto;
+  padding: 20px;
   width: 980px;
   display: flex;
   flex-direction: column;
@@ -408,7 +409,7 @@ footer .socials img {
 .yourRecipesPage {
   min-height: 100vh;
   padding: 131px 107px 153px 107px;
-  background-image: linear-gradient(rgba(167, 232, 189, 0.685), rgba(167, 232, 189, 0.685)), url(/images/recipe-hero.jpg);
+  background-image: linear-gradient(rgba(167, 232, 189, 0.685), rgba(167, 232, 189, 0.685)), url(../images/recipe-hero.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
