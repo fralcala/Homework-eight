@@ -1,0 +1,95 @@
+.createPage {
+  //   height: 100vh;
+  margin-top: 131px;
+  margin-bottom: 153px;
+  // background-color: blue;
+
+  .form {
+    margin: 0 auto;
+    // background-color: brown;
+    width: 980px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-family: caveat;
+      font-weight: bold;
+      font-size: 25px;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      font-size: 20px;
+      font-family: lato;
+      height: 30px;
+      padding-bottom: 5px;
+      margin-top: 62px;
+      border: none;
+      border-bottom: 2px solid black;
+      // background-color: dodgerblue;
+    }
+
+    input::placeholder {
+      color: black;
+      font-size: 20px;
+      font-family: lato-light;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    .ingreds,
+    .instructs,
+    .recipeInfo {
+      position: relative;
+      margin-bottom: 127px;
+
+      p {
+        font-size: 20px;
+        font-family: lato-black;
+      }
+    }
+
+    .addImageBtn {
+      padding: 10px 15px;
+      width: 110px;
+      height: 36px;
+      background-color: $pink;
+      border-radius: 30px;
+      position: absolute;
+      right: 0;
+      top: -12px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 17px;
+      font-family: caveat;
+    }
+
+    .addBtn {
+      padding: 10px 15px;
+      height: 38px;
+      width: 38px;
+      background-color: $pink;
+      color: white;
+      border-radius: 50%;
+      position: absolute;
+      right: 0;
+      bottom: 5px;
+      cursor: pointer;
+    }
+
+    .submitBtn {
+      width: 422px;
+      height: 52px;
+      align-self: center;
+      border: none;
+      border-radius: 30px;
+      background-color: $pink;
+      font-size: 25px;
+      font-family: caveat;
+      font-size: 25px;
+    }
+  }
+}

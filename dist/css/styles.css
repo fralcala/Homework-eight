@@ -36,6 +36,10 @@ p {
   font-family: lato-black;
   src: url(../fonts/Lato-Black.ttf);
 }
+@font-face {
+  font-family: lato-light;
+  src: url(../fonts/Lato-Light.ttf);
+}
 .logo img {
   height: 55px;
   position: relative;
@@ -317,5 +321,158 @@ footer .socials img {
     flex-direction: column;
   }
 }
+.createPage {
+  margin-top: 131px;
+  margin-bottom: 153px;
+}
+.createPage .form {
+  margin: 0 auto;
+  width: 980px;
+  display: flex;
+  flex-direction: column;
+}
+.createPage .form h1 {
+  font-family: caveat;
+  font-weight: bold;
+  font-size: 25px;
+}
+.createPage .form input {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  font-family: lato;
+  height: 30px;
+  padding-bottom: 5px;
+  margin-top: 62px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+.createPage .form input::placeholder {
+  color: black;
+  font-size: 20px;
+  font-family: lato-light;
+}
+.createPage .form input:focus {
+  outline: none;
+}
+.createPage .form .ingreds,
+.createPage .form .instructs,
+.createPage .form .recipeInfo {
+  position: relative;
+  margin-bottom: 127px;
+}
+.createPage .form .ingreds p,
+.createPage .form .instructs p,
+.createPage .form .recipeInfo p {
+  font-size: 20px;
+  font-family: lato-black;
+}
+.createPage .form .addImageBtn {
+  padding: 10px 15px;
+  width: 110px;
+  height: 36px;
+  background-color: rgb(252, 188, 184);
+  border-radius: 30px;
+  position: absolute;
+  right: 0;
+  top: -12px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 17px;
+  font-family: caveat;
+}
+.createPage .form .addBtn {
+  padding: 10px 15px;
+  height: 38px;
+  width: 38px;
+  background-color: rgb(252, 188, 184);
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  cursor: pointer;
+}
+.createPage .form .submitBtn {
+  width: 422px;
+  height: 52px;
+  align-self: center;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(252, 188, 184);
+  font-size: 25px;
+  font-family: caveat;
+  font-size: 25px;
+}
 
-/*# sourceMappingURL=styles.css.map */
+.yourRecipesPage {
+  min-height: 100vh;
+  padding: 131px 107px 153px 107px;
+  background-image: linear-gradient(rgba(167, 232, 189, 0.685), rgba(167, 232, 189, 0.685)), url(/images/recipe-hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.yourRecipesPage .recipeEntries h1 {
+  font-weight: bold;
+  font-size: 25px;
+  font-family: caveat;
+  margin-bottom: 52px;
+}
+.yourRecipesPage .recipeEntries .recipeContent {
+  display: flex;
+  margin-bottom: 15px;
+}
+.yourRecipesPage .recipeEntries .recipeContent .recipeImageHolder {
+  width: 300px;
+  height: 263px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  background-color: white;
+}
+.yourRecipesPage .recipeEntries .recipeContent .recipeDescription {
+  font-family: lato;
+  width: 224px;
+  height: 263px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.yourRecipesPage .recipeEntries .recipeContent .recipeDescription h2 {
+  border-bottom: 2px solid black;
+}
+.yourRecipesPage .recipeEntries .recipeContent .recipeDescription .icons {
+  display: flex;
+  flex-direction: column;
+}
+.yourRecipesPage .recipeEntries .recipeContent .recipeDescription .icons .icon {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  margin-top: 17px;
+}
+.yourRecipesPage .recipeEntries .recipeContent .recipeDescription .icons .icon img {
+  height: 25px;
+  margin-right: 20px;
+}
+.yourRecipesPage .recipeEntries button {
+  width: 127px;
+  height: 42px;
+  background-color: rgb(255, 217, 114);
+  border: none;
+  border-radius: 26px;
+  box-shadow: 1px 9px 7px rgba(58, 58, 58, 0.397);
+  font-size: 20px;
+  font-family: caveat;
+}
+.yourRecipesPage .recipeEntries .recipeButtons {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}

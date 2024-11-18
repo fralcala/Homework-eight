@@ -1,5 +1,5 @@
 import * as $ from "jquery";
-import { signUserUp, signUserOut, signUserin, changePage } from "./model";
+import { signUserUp, signUserOut, signUserin, changeRoute } from "./model";
 
 function initListeners() {
   // sign up
@@ -28,7 +28,7 @@ function route() {
   let hashTag = window.location.hash;
   let pageID = hashTag.replace("#", "");
   console.log("route", pageID);
-  changePage(pageID);
+  changeRoute(pageID);
 }
 
 // this function adds the url change listener to the window

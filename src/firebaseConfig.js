@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDiDWMNO7oIVs4D6H4FL52GaKtMFVwAodk",
-  authDomain: "jungle-cook-n315-760d3.firebaseapp.com",
-  projectId: "jungle-cook-n315-760d3",
-  storageBucket: "jungle-cook-n315-760d3.firebasestorage.app",
-  messagingSenderId: "213002349816",
-  appId: "1:213002349816:web:930a220d6cb44372f11f0d",
+  apiKey: "AIzaSyDKRoLLSKbsdBXwrpDVDJ34DS3dcZig5S8",
+  authDomain: "junglen315.firebaseapp.com",
+  projectId: "junglen315",
+  storageBucket: "junglen315.firebasestorage.app",
+  messagingSenderId: "9202976369",
+  appId: "1:9202976369:web:671530319062ee26487dd0",
 };
 
 export const app = initializeApp(firebaseConfig);
