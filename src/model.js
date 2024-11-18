@@ -55,20 +55,20 @@ export function signUserin(email, password) {
 const userRecipes = [];
 
 function addRecipeListeners() {
-  $("#ingredBtn").on("click", function () {
+  $("#ingredsBtn").on("click", function () {
     let currentIngredCount = $(".ingreds input").length;
     currentIngredCount++;
-    // console.log("ingredBtn clicked", currentIngredCount);
+
     $(".ingreds").append(
-      `<input type="text" id="ingred${currentIngredCount}" placeholder="Ingredient ${currentIngredCount}" />`
+      `<input type="text" id="ingred${currentIngredCount}" placeholder="Ingredient #${currentIngredCount}" />`
     );
   });
 
-  $("#instructBtn").on("click", function () {
+  $("#instrcutBtn").on("click", function () {
     let currentInstructCount = $(".instructs input").length;
     currentInstructCount++;
     $(".instructs").append(
-      `<input type="text" id="instruct${currentInstructCount}" placeholder="Instruction ${currentInstructCount}" />`
+      `<input type="text" id="instruct${currentInstructCount}" placeholder="Instruction #${currentInstructCount}" />`
     );
   });
 
@@ -76,17 +76,20 @@ function addRecipeListeners() {
     let recipe = {
       recipeName: $("#recipeName").val(),
       recipeImageURL: $("#imageURL").val(),
-      ingredients: [],
-      instructions: [],
+      recipeDesc: $("#recipeDesc").val(),
+      recipeTime: $("#recipeTime").val(),
+      servingSize: $("#servingSize").val(),
+      // ingredients: [],
+      // instructions: [],
     };
 
-    $(".ingreds input").each(function () {
-      recipe.ingredients.push($(this).val());
-    });
+    // $(".ingreds input").each(function () {
+    //   recipe.ingredients.push($(this).val());
+    // });
 
-    $(".instructs input").each(function () {
-      recipe.instructions.push($(this).val());
-    });
+    // $(".instructs input").each(function () {
+    //   recipe.instructions.push($(this).val());
+    // });
 
     userRecipes.push(recipe);
     alert("Recipe submitted!");
@@ -97,8 +100,8 @@ function addRecipeListeners() {
 
 function removeRecipeListeners() {
   $(".submitBtn").off("click");
-  $("#instructBtn").off("click");
-  $("#ingredBtn").off("click");
+  $("#instrcutBtn").off("click");
+  $("#ingredsBtn").off("click");
 }
 export function changeRoute() {
   let hashTag = window.location.hash;
@@ -112,21 +115,20 @@ export function changeRoute() {
         addRecipeListeners();
       } else if (pageID == "yourRecipes") {
         console.log("userRecipes " + userRecipes);
-        let rectipeStr = "";
+        let recipeStr = "";
         $.each(userRecipes, (index, recipe) => {
-          rectipeStr += `<div class="recipe">
+          recipeStr += `<div class="recipe">
   <div class="recipeImageHolder">
     <img src="${recipe.recipeImageURL}" alt="Recipe 1" />
   </div>
   <div class="recipeDescription">
     <h2>${recipe.recipeName}</h2>
-    <p>Ingredients: ingredient 1, ingredient 2, ingredient 3</p>
-    <p>Instructions: instruction 1, instruction 2, instruction 3</p>
+    <p>${recipe.recipeDesc}</p>
   </div>
 </div>`;
         });
 
-        $("#showAllRecipes").html(rectipeStr);
+        $("#showAllRecipes").html(recipeStr);
 
         removeRecipeListeners();
       } else {
