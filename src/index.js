@@ -1,28 +1,11 @@
 import * as $ from "jquery";
-import { signUserUp, signUserOut, signUserin, changeRoute } from "./model";
-
-function initListeners() {
-  // sign up
-  console.log("init");
-  $("#signSubmit").on("click", () => {
-    const firstName = $("#fName").val();
-    const lastName = $("#lName").val();
-    const email = $("#email").val();
-    const password = $("#password").val();
-
-    signUserUp(firstName, lastName, email, password);
-  });
-
-  $("#so").on("click", () => {
-    signUserOut();
-  });
-
-  $("#logSubmit").on("click", () => {
-    let logEmail = $("#logEmail").val();
-    let logPassword = $("#logPassword").val();
-    signUserin(logEmail, logPassword);
-  });
-}
+import {
+  signUserUp,
+  signUserOut,
+  signUserin,
+  changeRoute,
+  addRecipeListeners,
+} from "./model";
 
 function route() {
   let hashTag = window.location.hash;
@@ -31,13 +14,33 @@ function route() {
   changeRoute(pageID);
 }
 
-// this function adds the url change listener to the window
-function initSite() {
+function initListeners() {
+  //URL
   $(window).on("hashchange", route);
   route();
+
+  // sign up
+  console.log("init");
+  $(document).on("click", "#signSubmit", () => {
+    console.log("hello");
+    const firstName = $("#fName").val();
+    const lastName = $("#lName").val();
+    const email = $("#email").val();
+    const password = $("#password").val();
+    signUserUp(firstName, lastName, email, password);
+  });
+
+  $("#so").on("click", () => {
+    signUserOut();
+  });
+
+  $(document).on("click", "#logSubmit", () => {
+    let logEmail = $("#logEmail").val();
+    let logPassword = $("#logPassword").val();
+    signUserin(logEmail, logPassword);
+  });
 }
 
 $(document).ready(function () {
   initListeners();
-  initSite();
 });

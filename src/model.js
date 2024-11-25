@@ -24,9 +24,11 @@ export function signUserUp(fn, ln, email, password) {
   createUserWithEmailAndPassword(auth, email, password)
     .then(() => {
       console.log("User Created");
+      alert("User Created!");
     })
     .catch((error) => {
-      console.log(error);
+      const errorMessage = error.message;
+      alert("Error Message " + errorMessage);
     });
 }
 
@@ -37,17 +39,19 @@ export function signUserOut() {
       $("#yr");
     })
     .catch((error) => {
-      console.log("Error" + error);
+      const errorMessage = error.message;
+      alert("Error Message " + errorMessage);
     });
 }
 
 export function signUserin(email, password) {
   signInWithEmailAndPassword(auth, email, password)
     .then(() => {
-      console.log("User signed in");
+      alert("User signed in");
     })
     .catch((error) => {
-      console.log(error);
+      const errorMessage = error.message;
+      alert("Error Message " + errorMessage);
     });
 }
 
@@ -136,7 +140,7 @@ export function changeRoute() {
       }
     });
   } else {
-    $.get(`pages/home/home.html`, function (data) {
+    $.get(`pages/home.html`, function (data) {
       console.log("data " + data);
       $("#app").html(data);
     });

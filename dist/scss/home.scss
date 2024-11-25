@@ -32,7 +32,7 @@
         border-radius: 50%;
         right: -70px;
         top: -50px;
-        z-index: 1;
+        z-index: 5;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -48,6 +48,7 @@
       }
 
       .big-circle {
+        position: relative;
         width: 357px;
         height: 357px;
         background-color: $yellow;
@@ -56,10 +57,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        z-index: 80;
         padding: 20px;
         box-shadow: -3px 10px 10px 1px rgba(39, 39, 39, 0.247);
         font-size: 13px;
-        z-index: 33;
+        // z-index: 33;
 
         h1 {
           font-size: 24px;

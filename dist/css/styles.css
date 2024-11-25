@@ -61,6 +61,7 @@ header {
   padding: 0.5rem 5% 0.5rem 0;
   position: absolute;
   width: 100%;
+  z-index: 99;
 }
 
 .nav-container {
@@ -221,7 +222,7 @@ footer .socials img {
   border-radius: 50%;
   right: -70px;
   top: -50px;
-  z-index: 1;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,6 +235,7 @@ footer .socials img {
   padding-top: 20px;
 }
 .hero .home .circle-container .big-circle {
+  position: relative;
   width: 357px;
   height: 357px;
   background-color: rgb(255, 217, 114);
@@ -242,10 +244,10 @@ footer .socials img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 80;
   padding: 20px;
   box-shadow: -3px 10px 10px 1px rgba(39, 39, 39, 0.247);
   font-size: 13px;
-  z-index: 33;
 }
 .hero .home .circle-container .big-circle h1 {
   font-size: 24px;
@@ -324,6 +326,7 @@ footer .socials img {
 .createPage {
   margin-top: 131px;
   margin-bottom: 153px;
+  min-height: 100vh;
 }
 .createPage .form {
   margin: 0 auto;
