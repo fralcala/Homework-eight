@@ -1,6 +1,6 @@
 homework 8
 
-link: https://in-info-web4.luddy.indianapolis.iu.edu/~fralcala/N315/Homework-eight/dist/#home
+link: https://in-info-web4.luddy.indianapolis.iu.edu/~fralcala/N315/N315-Homework-eight/dist/#home
 
 For this homework assignment, you will make the Jungle Cook website fully functional. This site must be fully responsive for desktops and tablets, 1024×768, and must be a fully working CRUD application. Assets for this project can be found in Files > Jungle Cook. In this folder, you will find everything you need.
 
