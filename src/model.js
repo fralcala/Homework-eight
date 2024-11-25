@@ -47,7 +47,7 @@ export function signUserOut() {
 export function signUserin(email, password) {
   signInWithEmailAndPassword(auth, email, password)
     .then(() => {
-      alert("User signed in");
+      alert("User logged in");
     })
     .catch((error) => {
       const errorMessage = error.message;
