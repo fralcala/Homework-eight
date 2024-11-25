@@ -30,7 +30,7 @@ function initListeners() {
     signUserUp(firstName, lastName, email, password);
   });
 
-  $("#so").on("click", () => {
+  $(".logOut").on("click", () => {
     signUserOut();
   });
 

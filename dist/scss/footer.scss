@@ -16,6 +16,11 @@ footer {
     justify-content: center;
     gap: 1.6rem;
     flex-wrap: wrap;
+
+    .logOut {
+      display: none;
+      cursor: pointer;
+    }
   }
 
   .socials {

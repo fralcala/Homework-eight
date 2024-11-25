@@ -68,6 +68,11 @@ header {
   align-items: center;
   margin-left: 20px;
   box-shadow: -2px 9px 7px rgba(58, 58, 58, 0.397);
+
+  .logOut {
+    display: none;
+    cursor: pointer;
+  }
 }
 
 .nav-container,

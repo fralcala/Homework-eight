@@ -108,6 +108,10 @@ header {
   margin-left: 20px;
   box-shadow: -2px 9px 7px rgba(58, 58, 58, 0.397);
 }
+.nav--ul__two .logOut {
+  display: none;
+  cursor: pointer;
+}
 
 .nav-container,
 .nav--ul__one,
@@ -176,6 +180,10 @@ footer .links ul {
   justify-content: center;
   gap: 1.6rem;
   flex-wrap: wrap;
+}
+footer .links ul .logOut {
+  display: none;
+  cursor: pointer;
 }
 footer .socials {
   display: flex;
@@ -275,7 +283,7 @@ footer .socials img {
   align-items: center;
   padding: 50px;
 }
-.loginPage .login {
+.loginPage .logIn {
   width: 209px;
 }
 .loginPage .signUp {
@@ -285,13 +293,13 @@ footer .socials img {
   font-family: lato-ita;
   margin-bottom: 3px;
 }
-.loginPage .login,
+.loginPage .logIn,
 .loginPage .signUp {
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
-.loginPage .login h2,
+.loginPage .logIn h2,
 .loginPage .signUp h2 {
   font-family: lato-black;
 }

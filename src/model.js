@@ -13,10 +13,10 @@ const auth = getAuth(app);
 onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log("User is signed in");
-    $("#yr").css("display", "block");
+    $(".yr").css("display", "block");
   } else {
     console.log("User is signed out for real");
-    $("#yr").css("display", "block");
+    $(".yr").css("display", "none");
   }
 });
 
@@ -25,6 +25,8 @@ export function signUserUp(fn, ln, email, password) {
     .then(() => {
       console.log("User Created");
       alert("User Created!");
+      $(".login").css("display", "none");
+      $(".logOut").css("display", "block");
     })
     .catch((error) => {
       const errorMessage = error.message;
@@ -36,7 +38,9 @@ export function signUserOut() {
   signOut(auth)
     .then(() => {
       console.log("User signed out");
-      $("#yr");
+      $(".yr");
+      $(".login").css("display", "block");
+      $(".logOut").css("display", "none");
     })
     .catch((error) => {
       const errorMessage = error.message;
@@ -48,6 +52,8 @@ export function signUserin(email, password) {
   signInWithEmailAndPassword(auth, email, password)
     .then(() => {
       alert("User logged in");
+      $(".login").css("display", "none");
+      $(".logOut").css("display", "block");
     })
     .catch((error) => {
       const errorMessage = error.message;
@@ -107,6 +113,7 @@ function removeRecipeListeners() {
   $("#instrcutBtn").off("click");
   $("#ingredsBtn").off("click");
 }
+
 export function changeRoute() {
   let hashTag = window.location.hash;
   let pageID = hashTag.replace("#", "");
