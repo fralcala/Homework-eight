@@ -13,10 +13,11 @@ const auth = getAuth(app);
 onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log("User is signed in");
-    $(".yr").css("display", "block");
+    // $(".yr").css("display", "block");
   } else {
     console.log("User is signed out for real");
-    $(".yr").css("display", "none");
+    // $(".yr").css("display", "none");
+    // uncomment to get yr to show up only when logged in
   }
 });
 
@@ -129,14 +130,32 @@ export function changeRoute() {
         let recipeStr = "";
         $.each(userRecipes, (index, recipe) => {
           recipeStr += `<div class="recipe">
-  <div class="recipeImageHolder">
-    <img src="${recipe.recipeImageURL}" alt="Recipe 1" />
-  </div>
-  <div class="recipeDescription">
-    <h2>${recipe.recipeName}</h2>
-    <p>${recipe.recipeDesc}</p>
-  </div>
-</div>`;
+        <div class="recipeContent">
+          <div class="recipeImageHolder">
+            <img src="images/${recipe.recipeImageURL}" alt="${recipe.recipeName}" />
+            <button>View</button>
+          </div>
+
+          <div class="recipeDescription">
+            <h2>${recipe.recipeName}</h2>
+            <p>${recipe.recipeDesc}</p>
+            <div class="icons">
+              <div class="icon" id="time">
+                <img src="./images/time.svg" alt="time logo" />
+                <p>${recipe.recipeTime}</p>
+              </div>
+              <div class="icon" id="servings">
+                <img src="./images/servings.svg" alt="time logo" />
+                <p>${recipe.servingSize}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recipeButtons">
+          <button>Edit Recipe</button>
+          <button>Delete</button>
+        </div>
+      </div>`;
         });
 
         $("#showAllRecipes").html(recipeStr);
