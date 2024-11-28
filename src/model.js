@@ -133,7 +133,7 @@ export function changeRoute() {
         <div class="recipeContent">
           <div class="recipeImageHolder">
             <img src="images/${recipe.recipeImageURL}" alt="${recipe.recipeName}" />
-            <button>View</button>
+            <button class="viewBtn">View</button>
           </div>
 
           <div class="recipeDescription">

@@ -367,6 +367,9 @@ footer .socials img {
 .createPage .form input:focus {
   outline: none;
 }
+.createPage .form input[type=file]::file-selector-button {
+  display: hidden;
+}
 .createPage .form .ingreds,
 .createPage .form .instructs,
 .createPage .form .recipeInfo {
@@ -387,7 +390,7 @@ footer .socials img {
   border-radius: 30px;
   position: absolute;
   right: 0;
-  top: -12px;
+  bottom: 377px;
   cursor: pointer;
   text-align: center;
   font-size: 17px;
@@ -431,11 +434,20 @@ footer .socials img {
   font-family: caveat;
   margin-bottom: 52px;
 }
-.yourRecipesPage .recipeEntries .recipeContent {
+.yourRecipesPage .recipeEntries #showAllRecipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.yourRecipesPage .recipeEntries #showAllRecipes .recipe {
+  margin-bottom: 50px;
+}
+.yourRecipesPage .recipeEntries #showAllRecipes .recipe .recipeContent {
   display: flex;
   margin-bottom: 15px;
 }
-.yourRecipesPage .recipeEntries .recipeContent .recipeImageHolder {
+.yourRecipesPage .recipeEntries #showAllRecipes .recipe .recipeContent .recipeImageHolder {
+  position: relative;
   width: 300px;
   height: 263px;
   display: flex;
@@ -444,7 +456,17 @@ footer .socials img {
   border-radius: 24px;
   background-color: white;
 }
-.yourRecipesPage .recipeEntries .recipeContent .recipeDescription {
+.yourRecipesPage .recipeEntries #showAllRecipes .recipe .recipeContent .recipeImageHolder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 24px;
+}
+.yourRecipesPage .recipeEntries #showAllRecipes .recipe .recipeContent .recipeImageHolder .viewBtn {
+  position: absolute;
+}
+.yourRecipesPage .recipeEntries #showAllRecipes .recipe .recipeContent .recipeDescription {
   font-family: lato;
   width: 224px;
   height: 263px;
@@ -455,24 +477,24 @@ footer .socials img {
   align-items: center;
   background-color: white;
 }
-.yourRecipesPage .recipeEntries .recipeContent .recipeDescription h2 {
+.yourRecipesPage .recipeEntries #showAllRecipes .recipe .recipeContent .recipeDescription h2 {
   border-bottom: 2px solid black;
 }
-.yourRecipesPage .recipeEntries .recipeContent .recipeDescription .icons {
+.yourRecipesPage .recipeEntries #showAllRecipes .recipe .recipeContent .recipeDescription .icons {
   display: flex;
   flex-direction: column;
 }
-.yourRecipesPage .recipeEntries .recipeContent .recipeDescription .icons .icon {
+.yourRecipesPage .recipeEntries #showAllRecipes .recipe .recipeContent .recipeDescription .icons .icon {
   display: flex;
   align-items: center;
   height: 25px;
   margin-top: 17px;
 }
-.yourRecipesPage .recipeEntries .recipeContent .recipeDescription .icons .icon img {
+.yourRecipesPage .recipeEntries #showAllRecipes .recipe .recipeContent .recipeDescription .icons .icon img {
   height: 25px;
   margin-right: 20px;
 }
-.yourRecipesPage .recipeEntries button {
+.yourRecipesPage .recipeEntries #showAllRecipes button {
   width: 127px;
   height: 42px;
   background-color: rgb(255, 217, 114);
@@ -482,7 +504,7 @@ footer .socials img {
   font-size: 20px;
   font-family: caveat;
 }
-.yourRecipesPage .recipeEntries .recipeButtons {
+.yourRecipesPage .recipeEntries #showAllRecipes .recipeButtons {
   width: 300px;
   display: flex;
   justify-content: space-between;
