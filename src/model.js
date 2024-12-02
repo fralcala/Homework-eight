@@ -13,10 +13,10 @@ const auth = getAuth(app);
 onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log("User is signed in");
-    // $(".yr").css("display", "block");
+    $(".yr").css("display", "block");
   } else {
     console.log("User is signed out for real");
-    // $(".yr").css("display", "none");
+    $(".yr").css("display", "none");
     // uncomment to get yr to show up only when logged in
   }
 });

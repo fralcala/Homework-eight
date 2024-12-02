@@ -339,7 +339,7 @@ footer .socials img {
 .createPage .form {
   margin: 0 auto;
   padding: 20px;
-  width: 980px;
+  max-width: 980px;
   display: flex;
   flex-direction: column;
 }
