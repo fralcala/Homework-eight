@@ -95,6 +95,9 @@ header {
 .nav--ul__one {
   margin: 0 auto;
 }
+.nav--ul__one .yr {
+  display: none;
+}
 
 .nav--ul__two {
   width: 158px;
